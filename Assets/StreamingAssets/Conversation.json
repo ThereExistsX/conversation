@@ -1,0 +1,139 @@
+{
+    "npc": [
+        {
+            "text": "Hello, what is your name?",
+            "conditions": [
+                { "condition": "playerName", "value": "" },
+                { "condition": "isFriendly", "value": "true" },
+                { "condition": "spokeBefore", "value": "false" }
+            ],
+
+            "playerResponses": [
+                "I am called Kae.",
+                "None of your goddamn business."
+            ]
+        },
+
+        {
+            "text": "Hello again, Kae!",
+            "conditions": [
+                { "condition": "playerName", "value": "Kae" },
+                { "condition": "isFriendly", "value": "true" },
+                { "condition": "spokeBefore", "value": "true" }
+            ],
+
+            "playerResponses": []
+        },
+
+        {
+            "text": "Welcome back, mysterious stranger.",
+            "conditions": [
+                { "condition": "playerName", "value": "" },
+                { "condition": "isFriendly", "value": "true" },
+                { "condition": "spokeBefore", "value": "true" }
+            ],
+
+            "playerResponses": [
+                "I am called Kae."
+            ]
+        },
+
+        {
+            "text": "I'd rather not speak to you anymore.",
+            "conditions": [
+                { "condition": "playerName", "value": "" },
+                { "condition": "isFriendly", "value": "false" },
+                { "condition": "spokeBefore", "value": "true" }
+            ],
+
+            "playerResponses": [
+            ]
+        },
+
+        {
+            "text": "Nice to meet you, Kae!",
+            "conditions": [
+                { "condition": "playerName", "value": "Kae" },
+                { "condition": "isFriendly", "value": "true" }
+            ],
+
+            "playerResponses": [
+            ]
+        },
+
+        {
+            "text": "Well, that was rude!",
+            "conditions": [
+                { "condition": "playerName", "value": "" },
+                { "condition": "isFriendly", "value": "false" }
+            ],
+
+            "playerResponses": [
+            ]
+        }
+
+    ],
+
+    "player": [
+        {
+            "text": "I am called Kae.",
+            "conditions": [
+                { "condition": "playerName", "value": "" }
+            ],
+
+            "setConditions": [
+                { "conditionSet": "isFriendly", "valueSet": "true" },
+                { "conditionSet": "playerName", "valueSet": "Kae" }
+            ],
+
+            "npcResponses": [
+                "Nice to meet you, Kae!",
+                "Welcome back, Mysterious Stranger."
+            ]
+        },
+
+        {
+            "text": "None of your goddamn business.",
+            "conditions": [
+                { "condition": "playerName", "value": "" }
+            ],
+
+            "setConditions": [
+                { "conditionSet": "isFriendly", "valueSet": "false" }
+            ],
+
+            "npcResponses": [
+                "Well, that was rude!"
+            ]
+        },
+
+        {
+            "text": "Too bad, so sad.",
+            "conditions": [
+            ],
+
+            "setConditions": [
+                { "conditionSet": "isFriendly", "valueSet": "false" }
+            ],
+
+            "npcResponses": [
+            ]
+        },
+
+        {
+            "text": "I'm very sorry.",
+            "conditions": [
+            ],
+
+            "setConditions": [
+                { "conditionSet": "isFriendly", "valueSet": "false" }
+            ],
+
+            "npcResponses": [
+                { "conditionSet": "isFriendly", "valueSet": "true" }
+            ]
+        }
+
+    ]
+
+}
